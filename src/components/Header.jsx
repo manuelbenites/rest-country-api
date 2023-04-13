@@ -1,15 +1,46 @@
 import MoonIcon from "./MoonIcon.jsx"
+import SunIcon from "./SunIcon.jsx"
+
+import { useState } from "react"
 
 export default function Layout() {
+	const [theme, setTheme] = useState("")
+	const handleChangeTheme = () => {
+		const htmlClass = document.documentElement.classList
+		if (htmlClass.value === "dark") {
+			setTheme("dark")
+			htmlClass.remove("dark")
+		} else {
+			setTheme("")
+			htmlClass.add("dark")
+		}
+	}
+
 	return (
-		<header className="px-4 mb-6 shadow-header">
+		<header className="px-4 md:px-20 shadow-header dark:bg-dark-blue">
 			<nav className="flex justify-between items-center h-20">
-				<a className="font-extrabold text-[14px]" href="/">
+				<h1 className="font-extrabold sm:text-2xl dark:text-white text-[14px]">
 					Where in the world?
-				</a>
-				<button className="flex items-center text-xs font-semibold">
-					<MoonIcon />
-					<span className="ml-2">Dark Mode</span>
+				</h1>
+				<button
+					onClick={handleChangeTheme}
+					className="flex items-center text-xs font-semibold"
+				>
+					{theme !== "dark" ? (
+						<>
+							<SunIcon className="dark:fill-white" />
+							<span className="ml-2 dark:text-white text-[12px] sm:text-[16px]">
+								Light Mode
+							</span>
+						</>
+					) : (
+						<>
+							<MoonIcon className="dark:fill-white" />
+							<span className="ml-2 dark:text-white text-[12px] sm:text-[16px]">
+								Dark Mode
+							</span>
+						</>
+					)}
 				</button>
 			</nav>
 		</header>

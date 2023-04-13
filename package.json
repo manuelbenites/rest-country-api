@@ -6,9 +6,11 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"test": "vitest"
 	},
 	"devDependencies": {
+		"@testing-library/react": "^14.0.0",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.37.0",
 		"eslint-plugin-react": "^7.32.2",
@@ -19,8 +21,10 @@
 	},
 	"dependencies": {
 		"@vitejs/plugin-react": "3.1.0",
+		"jsdom": "^21.1.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-router-dom": "^6.10.0"
+		"react-router-dom": "^6.10.0",
+		"vitest": "^0.29.8"
 	}
 }
