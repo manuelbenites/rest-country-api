@@ -31,7 +31,7 @@ export default function CountryPage() {
 						<img
 							className="mx-auto h-full rounded-md md:mx-0 md:w-full max-w-[560px]"
 							src={currentCountry.flags.png}
-							alt={currentCountry.flags.alt}
+							alt="Image of the flag of a country"
 						/>
 						<div className="my-auto mx-auto md:mx-0 dark:text-white w-[320px] lg:w-[560px]">
 							<h1 className="mt-11 mb-4 font-extrabold md:mt-0 text-[22px] sm:text-[32px]">
