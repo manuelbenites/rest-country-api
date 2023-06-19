@@ -1,6 +1,5 @@
 import MoonIcon from "./MoonIcon.jsx"
 import SunIcon from "./SunIcon.jsx"
-
 import { useState } from "react"
 
 export default function Layout() {
@@ -17,7 +16,7 @@ export default function Layout() {
 	}
 
 	return (
-		<header className="px-4 md:px-20 shadow-header dark:bg-dark-blue">
+		<header className="px-4 md:px-8 lg:px-12 xl:px-20 shadow-header dark:bg-dark-blue">
 			<nav className="flex justify-between items-center h-20">
 				<h1 className="font-extrabold sm:text-2xl dark:text-white text-[14px]">
 					Where in the world?

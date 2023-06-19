@@ -22,7 +22,7 @@ export default function SearchCountry() {
 	return (
 		<form
 			onSubmit={handleFindCountry}
-			className="flex overflow-hidden relative mb-10 rounded-md max-w-[480px] shadow-input md:w-[480px] dark:bg-dark-blue"
+			className="flex overflow-hidden relative mb-10 rounded-md shadow-input md:w-[480px] dark:bg-dark-blue"
 		>
 			<button type="submit" className="pr-6 pl-8">
 				<SearchIcon className="dark:fill-white" />
